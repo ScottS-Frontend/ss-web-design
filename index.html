@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,6 +8,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
     <!-- Navigation -->
     <nav class="navbar">
         <div class="container">
@@ -17,12 +18,13 @@
                 <li><a href="#portfolio">Portfolio</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#contact">Contact</a></li>
+                <li><button class="theme-toggle" id="theme-toggle" aria-label="Toggle between light and dark color theme" aria-pressed="false">🌙</button></li>
             </ul>
         </div>
     </nav>
 
     <!-- Hero Section -->
-    <section class="hero">
+    <section id="main-content" class="hero">
         <div class="container">
             <h1>Websites That Turn Visitors Into Clients</h1>
             <p class="hero-subtitle">Professional web design for small businesses in Vacaville, Fairfield, and the Bay Area. Clean, fast, and built to grow your business.</p>
@@ -96,19 +98,19 @@
             <h2>Recent Work</h2>
             <div class="portfolio-grid">
                 <div class="portfolio-item">
-                    <div class="portfolio-image placeholder">Demo Site 1</div>
+                    <div class="portfolio-image placeholder" role="img" aria-label="Placeholder for law office website preview">Demo Site 1</div>
                     <h3>Law Office of Sample & Associates</h3>
                     <p>Professional services site with appointment booking and client intake forms.</p>
                     <span class="tag">Business Site</span>
                 </div>
                 <div class="portfolio-item">
-                    <div class="portfolio-image placeholder">Demo Site 2</div>
+                    <div class="portfolio-image placeholder" role="img" aria-label="Placeholder for wellness website preview">Demo Site 2</div>
                     <h3>Vacaville Wellness Therapy</h3>
                     <p>Clean, calming design for a local therapist. Mobile-first, fast loading.</p>
                     <span class="tag">Brochure Site</span>
                 </div>
                 <div class="portfolio-item">
-                    <div class="portfolio-image placeholder">Demo Site 3</div>
+                    <div class="portfolio-image placeholder" role="img" aria-label="Placeholder for accounting service website preview">Demo Site 3</div>
                     <h3>Fairfield Accounting Services</h3>
                     <p>Multi-page site with service breakdowns, team profiles, and contact integration.</p>
                     <span class="tag">Business Site</span>
@@ -199,11 +201,11 @@
                 <form class="contact-form" action="https://formspree.io/f/xeenpqbb" method="POST">
                     <div class="form-group">
                         <label for="name">Name</label>
-                        <input type="text" id="name" name="name" required>
+                        <input type="text" id="name" name="name" required aria-required="true">
                     </div>
                     <div class="form-group">
                         <label for="email">Email</label>
-                        <input type="email" id="email" name="email" required>
+                        <input type="email" id="email" name="email" required aria-required="true">
                     </div>
                     <div class="form-group">
                         <label for="business">Business Name</label>
@@ -211,7 +213,7 @@
                     </div>
                     <div class="form-group">
                         <label for="service">Interested In</label>
-                        <select id="service" name="service">
+                        <select id="service" name="service" aria-describedby="service-help">
                             <option value="">Select a service...</option>
                             <option value="brochure">Brochure Site ($300)</option>
                             <option value="business">Business Site ($1,200)</option>
@@ -219,6 +221,7 @@
                             <option value="audit">Free Website Audit</option>
                             <option value="other">Something Else</option>
                         </select>
+                        <small id=""service-help" class="form-help">Select the package that best fits your needs</small>
                     </div>
                     <div class="form-group">
                         <label for="message">Tell me about your project</label>

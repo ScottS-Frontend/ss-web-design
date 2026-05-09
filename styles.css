@@ -1,3 +1,85 @@
+/* CSS Custom Properties for theming */
+:root {
+    /* Light mode - Original Blue/Gray */
+    --primary: #2563eb;
+    --primary-light: #3b82f6;
+    --accent: #2563eb;
+    --accent-hover: #1d4ed8;
+    --bg: #ffffff;
+    --bg-secondary: #f8fafc;
+    --bg-card: #ffffff;
+    --text: #1e293b;
+    --text-secondary: #64748b;
+    --text-light: #64748b;
+    --border: #e2e8f0;
+    --shadow: rgba(0,0,0,0.1);
+    --success: #10b981;
+    --gradient-start: #f8fafc;
+    --gradient-end: #e2e8f0;
+}
+
+/* Dark mode */
+[data-theme="dark"] {
+    --primary: #60a5fa;
+    --primary-light: #93c5fd;
+    --accent: #3b82f6;
+    --accent-hover: #2563eb;
+    --bg: #0f172a;
+    --bg-secondary: #1e293b;
+    --bg-card: #1e293b;
+    --text: #f1f5f9;
+    --text-secondary: #cbd5e1;
+    --text-light: #64748b;
+    --border: #334155;
+    --shadow: rgba(0,0,0,0.3);
+    --success: #34d399;
+    --gradient-start: #0f172a;
+    --gradient-end: #1e293b;
+}
+
+.skip-link {
+    position: absolute;
+    top: -40px;
+    left: 0;
+    background: var(--primary);
+    color: #fff;
+    padding: 8px 16px;
+    z-index: 101;
+    text-decoration: none;
+    border-radius: 0 0 4px 0;
+    font-weight: 600;
+}
+
+.skip-link: focus {
+    top: 0;
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+    outline: 3px solid var(--accent);
+    outline-offset: 2px;
+    border-radius: 4px;
+}
+
+a:focus,
+button:focus,
+input:focus;
+select:focus,
+textarea:focus {
+    outline: none;
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+    outline: 3px solid var(--accent);
+    outline-offset: 2px;
+}
+
 /* Reset and Base */
 * {
     margin: 0;
@@ -8,8 +90,9 @@
 body {
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
     line-height: 1.6;
-    color: #333;
-    background: #fff;
+    color: var(--text);
+    background: var(--bg);
+    transition: background 0.3s, color 0.3s;
 }
 
 .container {
@@ -20,12 +103,13 @@ body {
 
 /* Navigation */
 .navbar {
-    background: #fff;
-    border-bottom: 1px solid #eee;
+    background: var(--bg);
+    border-bottom: 1px solid var(--border);
     padding: 1rem 0;
     position: sticky;
     top: 0;
     z-index: 100;
+    transition: background 0.3s, border-color 0.3s;
 }
 
 .navbar .container {
@@ -37,7 +121,7 @@ body {
 .logo {
     font-size: 1.5rem;
     font-weight: 700;
-    color: #2563eb;
+    color: var(--primary);
     text-decoration: none;
 }
 
@@ -45,104 +129,122 @@ body {
     display: flex;
     list-style: none;
     gap: 2rem;
+    align-items: center;
 }
 
 .nav-links a {
     text-decoration: none;
-    color: #555;
+    color: var(--text-secondary);
     font-weight: 500;
     transition: color 0.2s;
 }
 
 .nav-links a:hover {
-    color: #2563eb;
+    color: var(--accent);
+}
+
+/* Dark Mode Toggle */
+.theme-toggle {
+    background: var(--bg-secondary);
+    border: 2px solid var(--border);
+    border-radius: 50px;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    font-size: 1rem;
+    color: var(--text);
+    transition: all 0.3s;
+}
+
+.theme-toggle:hover {
+    border-color: var(--accent);
 }
 
 /* Hero */
 .hero {
-    background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+    background: linear-gradient(135deg, var(--gradient-start) 0%, var(--gradient-end) 100%);
     padding: 5rem 0;
     text-align: center;
+    transition: background 0.3s;
 }
 
 .hero h1 {
     font-size: 3rem;
     font-weight: 700;
-    color: #1e293b;
+    color: var(--text);
     margin-bottom: 1rem;
     line-height: 1.2;
 }
 
 .hero-subtitle {
     font-size: 1.25rem;
-    color: #64748b;
+    color: var(--text-secondary);
     max-width: 600px;
     margin: 0 auto 2rem;
 }
 
 .btn-primary {
     display: inline-block;
-    background: #2563eb;
+    background: var(--primary);
     color: #fff;
     padding: 0.875rem 2rem;
     border-radius: 6px;
     text-decoration: none;
     font-weight: 600;
     margin-right: 1rem;
-    border: 2px solid #2563eb;
+    border: 2px solid var(--primary);
     transition: all 0.2s;
 }
 
 .btn-primary:hover {
-    background: #1d4ed8;
-    border-color: #1d4ed8;
+    background: var(--primary-light);
+    border-color: var(--primary-light);
 }
 
 .btn-secondary {
     display: inline-block;
     background: transparent;
-    color: #2563eb;
+    color: var(--primary);
     padding: 0.875rem 2rem;
     border-radius: 6px;
     text-decoration: none;
     font-weight: 600;
-    border: 2px solid #2563eb;
+    border: 2px solid var(--primary);
     transition: all 0.2s;
 }
 
 .btn-secondary:hover {
-    background: #2563eb;
+    background: var(--primary);
     color: #fff;
 }
 
 .btn-outline {
     display: inline-block;
     background: transparent;
-    color: #2563eb;
+    color: var(--primary);
     padding: 0.75rem 1.5rem;
     border-radius: 6px;
     text-decoration: none;
     font-weight: 600;
-    border: 2px solid #2563eb;
+    border: 2px solid var(--primary);
     transition: all 0.2s;
 }
 
 .btn-outline:hover {
-    background: #2563eb;
+    background: var(--primary);
     color: #fff;
 }
 
 /* Services */
 .services {
     padding: 4rem 0;
-    background: #fff;
+    background: var(--bg);
 }
 
 .services h2 {
     text-align: center;
     font-size: 2.25rem;
     margin-bottom: 3rem;
-    color: #1e293b;
+    color: var(--text);
 }
 
 .services-grid {
@@ -153,19 +255,20 @@ body {
 }
 
 .service-card {
-    border: 2px solid #e2e8f0;
+    border: 2px solid var(--border);
     border-radius: 12px;
     padding: 2rem;
     position: relative;
-    transition: box-shadow 0.2s;
+    transition: box-shadow 0.2s, border-color 0.3s;
+    background: var(--bg-card);
 }
 
 .service-card:hover {
-    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    box-shadow: 0 10px 25px var(--shadow);
 }
 
 .service-card.featured {
-    border-color: #2563eb;
+    border-color: var(--accent);
     transform: scale(1.02);
 }
 
@@ -174,7 +277,7 @@ body {
     top: -12px;
     left: 50%;
     transform: translateX(-50%);
-    background: #2563eb;
+    background: var(--accent);
     color: #fff;
     padding: 0.25rem 1rem;
     border-radius: 20px;
@@ -185,13 +288,13 @@ body {
 .service-card h3 {
     font-size: 1.5rem;
     margin-bottom: 0.5rem;
-    color: #1e293b;
+    color: var(--text);
 }
 
 .price {
     font-size: 2.5rem;
     font-weight: 700;
-    color: #2563eb;
+    color: var(--accent);
     margin-bottom: 1rem;
 }
 
@@ -202,34 +305,37 @@ body {
 
 .service-card ul li {
     padding: 0.5rem 0;
-    border-bottom: 1px solid #f1f5f9;
+    border-bottom: 1px solid var(--border);
+    color: var(--text-secondary);
 }
 
 .service-card ul li:before {
     content: "✓ ";
-    color: #2563eb;
+    color: var(--accent);
     font-weight: 600;
 }
 
 .maintenance-note {
     text-align: center;
-    background: #f8fafc;
+    background: var(--bg-secondary);
     padding: 1.5rem;
     border-radius: 8px;
     margin-top: 2rem;
+    color: var(--text-secondary);
+    border: 1px solid var(--border);
 }
 
 /* Portfolio */
 .portfolio {
     padding: 4rem 0;
-    background: #f8fafc;
+    background: var(--bg-secondary);
 }
 
 .portfolio h2 {
     text-align: center;
     font-size: 2.25rem;
     margin-bottom: 3rem;
-    color: #1e293b;
+    color: var(--text);
 }
 
 .portfolio-grid {
@@ -239,10 +345,11 @@ body {
 }
 
 .portfolio-item {
-    background: #fff;
+    background: var(--bg-card);
     border-radius: 12px;
     overflow: hidden;
     transition: transform 0.2s;
+    border: 1px solid var(--border);
 }
 
 .portfolio-item:hover {
@@ -251,53 +358,55 @@ body {
 
 .portfolio-image {
     height: 200px;
-    background: linear-gradient(135deg, #e2e8f0 0%, #cbd5e1 100%);
+    background: linear-gradient(135deg, var(--border) 0%, var(--bg-secondary) 100%);
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #64748b;
+    color: var(--text-secondary);
     font-weight: 600;
 }
 
 .portfolio-item h3 {
     padding: 1.5rem 1.5rem 0.5rem;
     font-size: 1.25rem;
+    color: var(--text);
 }
 
 .portfolio-item p {
     padding: 0 1.5rem;
-    color: #64748b;
+    color: var(--text-secondary);
     margin-bottom: 1rem;
 }
 
 .tag {
     display: inline-block;
-    background: #dbeafe;
-    color: #2563eb;
+    background: var(--bg-secondary);
+    color: var(--primary);
     padding: 0.25rem 0.75rem;
     border-radius: 20px;
     font-size: 0.875rem;
     font-weight: 500;
     margin: 0 1.5rem 1.5rem;
+    border: 1px solid var(--border);
 }
 
 .portfolio-note {
     text-align: center;
     margin-top: 2rem;
-    color: #64748b;
+    color: var(--text-secondary);
     font-style: italic;
 }
 
 /* About */
 .about {
     padding: 4rem 0;
-    background: #fff;
+    background: var(--bg);
 }
 
 .about h2 {
     font-size: 2.25rem;
     margin-bottom: 1.5rem;
-    color: #1e293b;
+    color: var(--text);
 }
 
 .about-content {
@@ -313,20 +422,19 @@ body {
     border-radius: 50%;
     aspect-ratio: 1 / 1;
     object-fit: cover;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 15px var(--shadow);
 }
-
 
 .about-text p {
     margin-bottom: 1rem;
-    color: #475569;
+    color: var(--text-secondary);
     font-size: 1.05rem;
 }
 
 .about-skills h3 {
     font-size: 1.25rem;
     margin-bottom: 1rem;
-    color: #1e293b;
+    color: var(--text);
 }
 
 .skill-tags {
@@ -336,25 +444,33 @@ body {
 }
 
 .skill-tags span {
-    background: #f1f5f9;
-    color: #475569;
+    background: var(--bg-secondary);
+    color: var(--text-secondary);
     padding: 0.5rem 1rem;
     border-radius: 20px;
     font-size: 0.875rem;
     font-weight: 500;
+    border: 1px solid var(--border);
+    transition: all 0.2s;
+}
+
+.skill-tags span:hover {
+    background: var(--primary);
+    color: #fff;
+    border-color: var(--primary);
 }
 
 /* Testimonials */
 .testimonials {
     padding: 4rem 0;
-    background: #f8fafc;
+    background: var(--bg-secondary);
 }
 
 .testimonials h2 {
     text-align: center;
     font-size: 2.25rem;
     margin-bottom: 3rem;
-    color: #1e293b;
+    color: var(--text);
 }
 
 .testimonial-grid {
@@ -364,50 +480,50 @@ body {
 }
 
 .testimonial-card {
-    background: #fff;
+    background: var(--bg-card);
     padding: 2rem;
     border-radius: 12px;
-    border-left: 4px solid #2563eb;
+    border-left: 4px solid var(--accent);
 }
 
 .testimonial-card p {
     font-style: italic;
-    color: #475569;
+    color: var(--text-secondary);
     margin-bottom: 1.5rem;
     font-size: 1.05rem;
 }
 
 .client-name {
     font-weight: 600;
-    color: #1e293b;
+    color: var(--text);
 }
 
 .client-business {
-    color: #64748b;
+    color: var(--text-secondary);
     font-size: 0.875rem;
 }
 
 .placeholder-card {
-    opacity: 0.6;
-    border-left-color: #cbd5e1;
+    border-left-color: var(--border);
+    background: var(--bg-secondary);
 }
 
 /* Contact */
 .contact {
     padding: 4rem 0;
-    background: #fff;
+    background: var(--bg);
 }
 
 .contact h2 {
     text-align: center;
     font-size: 2.25rem;
     margin-bottom: 1rem;
-    color: #1e293b;
+    color: var(--text);
 }
 
 .contact-intro {
     text-align: center;
-    color: #64748b;
+    color: var(--text-secondary);
     margin-bottom: 3rem;
 }
 
@@ -422,19 +538,20 @@ body {
 }
 
 .info-item h4 {
-    color: #2563eb;
+    color: var(--accent);
     margin-bottom: 0.5rem;
     font-size: 1rem;
 }
 
 .info-item p {
-    color: #475569;
+    color: var(--text-secondary);
 }
 
 .contact-form {
-    background: #f8fafc;
+    background: var(--bg-secondary);
     padding: 2rem;
     border-radius: 12px;
+    border: 1px solid var(--border);
 }
 
 .form-group {
@@ -444,8 +561,15 @@ body {
 .form-group label {
     display: block;
     margin-bottom: 0.5rem;
-    color: #1e293b;
+    color: var(--text);
     font-weight: 500;
+}
+
+.form-help {
+    display: block;
+    margin-top: 0.25rem;
+    color: var(--text-secondary);
+    font-size: 0.875rem;
 }
 
 .form-group input,
@@ -453,24 +577,26 @@ body {
 .form-group textarea {
     width: 100%;
     padding: 0.75rem;
-    border: 2px solid #e2e8f0;
+    border: 2px solid var(--border);
     border-radius: 6px;
     font-family: inherit;
     font-size: 1rem;
     transition: border-color 0.2s;
+    background: var(--bg-card);
+    color: var(--text);
 }
 
 .form-group input:focus,
 .form-group select:focus,
 .form-group textarea:focus {
     outline: none;
-    border-color: #2563eb;
+    border-color: var(--accent);
 }
 
 /* Footer */
 .footer {
-    background: #1e293b;
-    color: #94a3b8;
+    background: var(--primary);
+    color: #ffffff var(--text-light);
     text-align: center;
     padding: 2rem 0;
 }
@@ -505,5 +631,10 @@ body {
     
     .service-card.featured {
         transform: none;
+    }
+    
+    .theme-toggle {
+        padding: 0.4rem 0.75rem;
+        font-size: 0.875rem;
     }
 }
