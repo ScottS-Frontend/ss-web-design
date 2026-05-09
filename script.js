@@ -12,21 +12,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-// Form submission handler
-document.querySelector('.contact-form').addEventListener('submit', function(e) {
-    e.preventDefault();
-    
-    // Get form data
-    const formData = new FormData(this);
-    const data = Object.fromEntries(formData);
-    
-    // For now, just show an alert
-    // Later you'll connect this to Formspree, Netlify Forms, or EmailJS
-    alert('Thanks for your message, ' + data.name + '! I\'ll get back to you within 24 hours.');
-    
-    // Reset form
-    this.reset();
-});
+
 
 // Add scroll effect to navbar
 window.addEventListener('scroll', () => {
