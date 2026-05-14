@@ -4,8 +4,7 @@ Professional web design portfolio and business site for Scott Slagle, a frontend
 
 ## Live Site
 
-[https://sswebdesign.vercel.app](https://sswebdesign.vercel.app)
-
+[SS Web Design Site](https://ss-web-design.vercel.app/)
 ## About
 
 SS Web Design builds clean, fast, mobile-responsive websites for small businesses in Solano County and the Bay Area. Services include brochure sites, business sites, and custom web development.
