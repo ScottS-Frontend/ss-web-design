@@ -93,6 +93,7 @@ body {
     color: var(--text);
     background: var(--bg);
     transition: background 0.3s, color 0.3s;
+    padding-top: 80px; 
 }
 
 .container {
@@ -105,24 +106,111 @@ body {
 .navbar {
     background: var(--bg);
     border-bottom: 1px solid var(--border);
-    padding: 1rem 0;
+    padding: 0.5rem 0;
     position: sticky;
     top: 0;
+    left: 0;
+    width: 100%;
     z-index: 100;
     transition: background 0.3s, border-color 0.3s;
+    height: 60px;
+    overflow: visible;
 }
 
 .navbar .container {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    height: 100%;
+    position: relative;
 }
 
 .logo {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
     font-size: 1.5rem;
     font-weight: 700;
     color: var(--primary);
     text-decoration: none;
+    height: 60px;
+}
+
+/* Hamburger button — hidden on desktop */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 30px;
+    height: 24px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    z-index: 102;
+}
+
+.hamburger .bar {
+    width: 100%;
+    height: 3px;
+    background-color: var(--text);
+    border-radius: 2px;
+    transition: all 0.3s ease;
+}
+
+/* Base styles for both logo images */
+.logo-img {
+    height: 250px; 
+    width: auto;
+    position: absolute;
+    top: -80px;
+    left: 0;
+    z-index: 101;
+    display: block;
+    transition: height 0.3s ease, top 0.3s ease;
+    pointer-events: auto;
+}
+
+/* Light mode: show transparent, hide solid */
+.logo-light {
+    display: block;
+}
+
+.logo-dark {
+    display: none;
+}
+
+/* Dark mode: show solid, hide transparent */
+[data-theme="dark"] .logo-light {
+    display: none !important;
+}
+
+[data-theme="dark"] .logo-dark {
+    display: block !important;
+}
+
+/* Dark mode: circle around the solid logo */
+[data-theme="dark"] .logo-dark {
+    display: block !important;
+    border-radius: 50%;
+    object-fit: cover;
+    aspect-ratio: 1 / 1;
+    background: var(--bg-card);
+    padding: 5px;
+    box-shadow: 0 4px 15px var(--shadow);
+    height: 250px;
+    width: 250px; 
+    position: absolute;
+    top: -75px;
+    left: 0;
+}
+
+[data-theme="dark"] .hero {
+    padding-top: 8rem;
+}
+
+.logo-text {
+    display: none;
 }
 
 .nav-links {
@@ -292,7 +380,7 @@ body {
 }
 
 .price {
-    font-size: 2.5rem;
+    font-size: 2rem;
     font-weight: 700;
     color: var(--accent);
     margin-bottom: 1rem;
@@ -404,6 +492,16 @@ body {
     margin-bottom: 1rem;
 }
 
+.portfolio-package-title {
+    text-align: center;
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--accent);
+    margin-bottom: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
 .tag {
     display: inline-block;
     text-decoration: none;
@@ -491,6 +589,7 @@ body {
 .testimonials {
     padding: 4rem 0;
     background: var(--bg-secondary);
+    display: none;
 }
 
 .testimonials h2 {
@@ -630,12 +729,42 @@ body {
 
 /* Mobile */
 @media (max-width: 768px) {
-    .hero h1 {
-        font-size: 2rem;
+    .hamburger {
+        display: flex;
     }
     
     .nav-links {
         display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 150px;
+        background: var(--bg);
+        border: 1px solid var(--border);
+        border-radius: 8px;
+        box-shadow: 0 4px 15px var(--shadow);
+        padding: 0.5rem 0;
+        gap: 0;
+        z-index: 99;
+    }
+    
+    .nav-links.active {
+        display: flex;
+    }
+    
+    .nav-links li {
+        text-align: left;
+        padding: 0.5rem 1rem;
+    }
+    
+    .nav-links a,
+    .nav-links .theme-toggle {
+        font-size: 1.1rem;
+    }
+    
+    .hero h1 {
+        font-size: 2rem;
     }
     
     .about-content,

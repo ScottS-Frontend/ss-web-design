@@ -30,6 +30,16 @@ themeToggle.addEventListener('click', () => {
     }
 });
 
+// Hamburger menu toggle
+const hamburger = document.getElementById('hamburger');
+const navLinks = document.getElementById('nav-links');
+
+hamburger.addEventListener('click', () => {
+    navLinks.classList.toggle('active');
+    const isExpanded = navLinks.classList.contains('active');
+    hamburger.setAttribute('aria-expanded', isExpanded);
+});
+
 // Smooth scroll for navigation links
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
@@ -44,6 +54,14 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
+// Close mobile menu when clicking a nav link
+document.querySelectorAll('.nav-links a').forEach(link => {
+    link.addEventListener('click', () => {
+        navLinks.classList.remove('active');
+        hamburger.setAttribute('aria-expanded', 'false');
+    });
+});
+
 // Add scroll effect to navbar
 window.addEventListener('scroll', () => {
     const navbar = document.querySelector('.navbar');
@@ -52,4 +70,22 @@ window.addEventListener('scroll', () => {
     } else {
         navbar.style.boxShadow = 'none';
     }
+});
+
+// Fade out logo on scroll
+window.addEventListener('scroll', () => {
+    const logos = document.querySelectorAll('.logo-img');
+    const scrollY = window.scrollY;
+
+    logos.forEach(logo => {
+        if (scrollY > 100) {
+            logo.style.opacity = '0';
+            logo.style.pointerEvents = 'none';
+            logo.style.transition = 'opacity 0.3s ease';
+        } else {
+            logo.style.opacity = '1';
+            logo.style.pointerEvents = 'auto';
+            logo.style.transition = 'opacity 0.3s ease';
+        }
+    });
 });

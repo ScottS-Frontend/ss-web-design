@@ -1,250 +1,412 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en" data-theme="light">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>SS Web Design | Professional Websites for Local Businesses</title>
-    <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-</head>
-<body>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
     <a href="#main-content" class="skip-link">Skip to main content</a>
     <!-- Navigation -->
-    <nav class="navbar">
-        <div class="container">
-            <a href="#" class="logo">SS Web Design</a>
-            <ul class="nav-links">
-                <li><a href="#services">Services</a></li>
-                <li><a href="#portfolio">Portfolio</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#contact">Contact</a></li>
-                <li><button class="theme-toggle" id="theme-toggle" aria-label="Toggle between light and dark color theme" aria-pressed="false">🌙</button></li>
-            </ul>
-        </div>
-    </nav>
+<nav class="navbar">
+  <div class="container">
+    <a href="#" class="logo">
+      <img
+        src="assets/SSWebDesignLogoTransparent.png"
+        alt="SS Web Design logo"
+        class="logo-img logo-light"
+      />
+      <img
+        src="assets/SSWebDesignLogo.png"
+        alt="SS Web Design logo"
+        class="logo-img logo-dark"
+      />
+      <span class="logo-text">SS Web Design</span>
+    </a>
+    
+    <!-- Hamburger button -->
+    <button class="hamburger" id="hamburger" aria-label="Open navigation menu" aria-expanded="false">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </button>
+    
+    <ul class="nav-links" id="nav-links">
+      <li><a href="#services">Services</a></li>
+      <li><a href="#portfolio">Portfolio</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li>
+        <button
+          class="theme-toggle"
+          id="theme-toggle"
+          aria-label="Toggle between light and dark color theme"
+          aria-pressed="false"
+        >
+          🌙
+        </button>
+      </li>
+    </ul>
+  </div>
+</nav>
 
     <!-- Hero Section -->
     <section id="main-content" class="hero">
-        <div class="container">
-            <h1>Websites That Turn Visitors Into Clients</h1>
-            <p class="hero-subtitle">Professional web design for small businesses in Vacaville, Fairfield, and the Bay Area. Clean, fast, and built to grow your business.</p>
-            <a href="#contact" class="btn-primary">Get a Free Quote</a>
-            <a href="#services" class="btn-secondary">View Services</a>
-        </div>
+      <div class="container">
+        <h1>Websites That Turn Visitors Into Clients</h1>
+        <p class="hero-subtitle">
+          Professional web design for small businesses in Vacaville, Fairfield,
+          and the Bay Area. Clean, fast, and built to grow your business.
+        </p>
+        <a href="#contact" class="btn-primary">Get a Free Quote</a>
+        <a href="#services" class="btn-secondary">View Services</a>
+      </div>
     </section>
 
     <!-- Services Section -->
     <section id="services" class="services">
-        <div class="container">
-            <h2>Services & Pricing</h2>
-            <div class="services-grid">
-                <div class="service-card">
-                    <h3>Brochure Site</h3>
-                    <div class="price">$300</div>
-                    <p>Perfect for new businesses or professionals who need a simple online presence.</p>
-                    <ul>
-                        <li>1-3 pages (Home, About, Contact)</li>
-                        <li>Mobile-responsive design</li>
-                        <li>Contact form</li>
-                        <li>Basic SEO setup</li>
-                        <li>1 round of revisions</li>
-                    </ul>
-                    <a href="#contact" class="btn-outline">Get Started</a>
-                </div>
-                
-                <div class="service-card featured">
-                    <div class="badge">Most Popular</div>
-                    <h3>Business Site</h3>
-                    <div class="price">$1,200</div>
-                    <p>Ideal for established businesses ready to attract and convert more clients.</p>
-                    <ul>
-                        <li>Up to 5 pages</li>
-                        <li>Mobile-responsive design</li>
-                        <li>Contact form + map integration</li>
-                        <li>Blog or testimonials section</li>
-                        <li>Social media links</li>
-                        <li>Google Analytics setup</li>
-                        <li>2 rounds of revisions</li>
-                    </ul>
-                    <a href="#contact" class="btn-primary">Get Started</a>
-                </div>
-                
-                <div class="service-card">
-                    <h3>Custom Site</h3>
-                    <div class="price">$2,000+</div>
-                    <p>For businesses needing advanced features, integrations, or unique functionality.</p>
-                    <ul>
-                        <li>Unlimited pages</li>
-                        <li>Custom design & animations</li>
-                        <li>Booking/appointment system</li>
-                        <li>E-commerce or payment integration</li>
-                        <li>Client portal or dashboard</li>
-                        <li>Advanced SEO & performance</li>
-                        <li>Ongoing support options</li>
-                    </ul>
-                    <a href="#contact" class="btn-outline">Contact for Quote</a>
-                </div>
-            </div>
-            
-            <div class="maintenance-note">
-                <p><strong>Maintenance & Updates:</strong> Available separately starting at $75/month. Includes hosting, security updates, content changes, and priority support.</p>
-            </div>
+      <div class="container">
+        <h2>Services & Pricing</h2>
+        <div class="services-grid">
+          <div class="service-card">
+            <h3>Brochure Site</h3>
+            <div class="price">$600 - $800</div>
+            <p>
+              Perfect for new businesses or professionals who need a simple
+              online presence.
+            </p>
+            <ul>
+              <li>1-3 pages (Home, About, Contact)</li>
+              <li>Mobile-responsive design</li>
+              <li>Contact form</li>
+              <li>Basic SEO setup</li>
+              <li>1 round of revisions</li>
+            </ul>
+            <a href="#contact" class="btn-outline">Get Started</a>
+          </div>
+
+          <div class="service-card featured">
+            <div class="badge">Most Popular</div>
+            <h3>Business Site</h3>
+            <div class="price">$1,500 - $2,500</div>
+            <p>
+              Ideal for established businesses ready to attract and convert more
+              clients.
+            </p>
+            <ul>
+              <li>Up to 5 pages</li>
+              <li>Mobile-responsive design</li>
+              <li>Contact form + map integration</li>
+              <li>Blog or testimonials section</li>
+              <li>Social media links</li>
+              <li>Google Analytics setup</li>
+              <li>2 rounds of revisions</li>
+            </ul>
+            <a href="#contact" class="btn-primary">Get Started</a>
+          </div>
+
+          <div class="service-card">
+            <h3>Custom Site</h3>
+            <div class="price">Starting at $3,000</div>
+            <p>
+              For businesses needing advanced features, integrations, or unique
+              functionality.
+            </p>
+            <ul>
+              <li>Unlimited pages</li>
+              <li>Custom design & animations</li>
+              <li>Booking/appointment system</li>
+              <li>E-commerce or payment integration</li>
+              <li>Client portal or dashboard</li>
+              <li>Advanced SEO & performance</li>
+              <li>Ongoing support options</li>
+            </ul>
+            <a href="#contact" class="btn-outline">Contact for Quote</a>
+          </div>
         </div>
+
+        <div class="maintenance-note">
+          <p>
+            <strong>Maintenance & Updates:</strong> Available separately
+            starting at $75/month. Includes hosting, security updates, content
+            changes, and priority support.
+          </p>
+        </div>
+      </div>
     </section>
 
-    <!-- Portfolio Section -->
-    <section id="portfolio" class="portfolio">
-        <div class="container">
-            <h2>Examples of Each Package</h2>
-            <div class="portfolio-grid">
-                <div class="portfolio-item">
-                    <div class="portfolio-image-wrapper">
-                        <a href="https://nirvana-wellness-therapy.vercel.app" target="_blank" rel="noopener">
-                            <img src="./assets/nirvana-preview.png" alt="Nirvana Wellness Therapy website preview" class="portfolio-image">
-                        </a>
-                    </div>
-                    <h3>Nirvana Wellness Therapy</h3>
-                    <p>Clean, calming design for a local therapist. Mobile-first, fast loading.</p>
-                    <a href="https://nirvana-wellness-therapy.vercel.app" target="_blank" rel="noopener" class="tag">Brochure Site</a>
-                </div>
-                <div class="portfolio-item">
-                    <div class="portfolio-image-wrapper">
-                        <a href="https://law-office-sample.vercel.app/" target="_blank" rel="noopener">
-                            <img src="./assets/sample-associates_preview.png" alt="Sample and Associates website preview" class="portfolio-image">
-                        </a>
-                    </div>
-                    <h3>Law Office of Sample & Associates</h3>
-                    <p>Professional services site with appointment booking and client intake forms.</p>
-                    <a href="https://law-office-sample.vercel.app/" target="_blank" rel="noopener" class="tag">Business Site</a>
-                </div>
-                
-                <div class="portfolio-item">
-                    <div class="portfolio-image-wrapper">
-                        <a href="https://fairfield-accounting.vercel.app" target="_blank" rel="noopener">
-                            <img src="./assets/fairfieldaccountingpreview.png" alt="Fairfield Accounting Services website preview" class="portfolio-image">
-                        </a>
-                    </div>
-                    <h3>Fairfield Accounting Services</h3>
-                    <p>Mult-page site with service breakdowns, team profiles, and contact integration.</p>
-                    <a href="https://fairfield-accounting.vercel.app/" target="_blank" rel="noopener" class="tag">Custom Site</a>
-                </div>
-            </div>
-            <p class="portfolio-note">Your project here. Let's build something great.</p>
+<!-- Portfolio Section -->
+<section id="portfolio" class="portfolio">
+  <div class="container">
+    <h2>Examples of Each Package</h2>
+    <div class="portfolio-grid">
+      
+      <div class="portfolio-item">
+        <h4 class="portfolio-package-title">Brochure Site</h4>
+        <div class="portfolio-image-wrapper">
+          <a
+            href="https://nirvana-wellness-therapy.vercel.app"
+            target="_blank"
+            rel="noopener"
+          >
+            <img
+              src="./assets/nirvana-preview.png"
+              alt="Nirvana Wellness Therapy website preview"
+              class="portfolio-image"
+            />
+          </a>
         </div>
-    </section>
+        <h3>Nirvana Wellness Therapy</h3>
+        <p>
+          Clean, calming design for a local therapist. Mobile-first, fast
+          loading.
+        </p>
+        <a
+          href="https://nirvana-wellness-therapy.vercel.app"
+          target="_blank"
+          rel="noopener"
+          class="tag"
+          >Brochure Site</a
+        >
+      </div>
+      
+      <div class="portfolio-item">
+        <h4 class="portfolio-package-title">Business Site</h4>
+        <div class="portfolio-image-wrapper">
+          <a
+            href="https://law-office-sample.vercel.app/"
+            target="_blank"
+            rel="noopener"
+          >
+            <img
+              src="./assets/sample-associates_preview.png"
+              alt="Sample and Associates website preview"
+              class="portfolio-image"
+            />
+          </a>
+        </div>
+        <h3>Law Office of Sample & Associates</h3>
+        <p>
+          Professional services site with appointment booking and client
+          intake forms.
+        </p>
+        <a
+          href="https://law-office-sample.vercel.app/"
+          target="_blank"
+          rel="noopener"
+          class="tag"
+          >Business Site</a
+        >
+      </div>
+
+      <div class="portfolio-item">
+        <h4 class="portfolio-package-title">Custom Advanced Site</h4>
+        <div class="portfolio-image-wrapper">
+          <a
+            href="https://fairfield-accounting.vercel.app"
+            target="_blank"
+            rel="noopener"
+          >
+            <img
+              src="./assets/fairfieldaccountingpreview.png"
+              alt="Fairfield Accounting Services website preview"
+              class="portfolio-image"
+            />
+          </a>
+        </div>
+        <h3>Fairfield Accounting Services</h3>
+        <p>
+          Mult-page site with service breakdowns, team profiles, and contact
+          integration.
+        </p>
+        <a
+          href="https://fairfield-accounting.vercel.app/"
+          target="_blank"
+          rel="noopener"
+          class="tag"
+          >Custom Site</a
+        >
+      </div>
+      
+    </div>
+    <p class="portfolio-note">
+      Your project here. Let's build something great.
+    </p>
+  </div>
+</section>
 
     <!-- About Section -->
     <section id="about" class="about">
-        <div class="container">
-            <div class="about-content">
-                <div class="about-image">
-                <img src="assets/mescott2.png" alt="Scott Slagle, web developer based in Vacaville, CA">
-                </div>
-                <div class="about-text">
-                    <h2>About Scott</h2>
-                    <p>I'm a frontend web developer based in Vacaville, CA, with a background that bridges business operations and modern web technology.</p>
-                    <p>For 25 years, I managed B2B client accounts and built CRM reporting systems at Jelly Belly Candy Company. I understand how small businesses operate, what they need from technology, and how to translate business goals into clean, effective websites.</p>
-                    <p>After completing intensive training in React, Next.js, and modern web development, I launched SS Web Design to help local professionals and small businesses establish a credible, client-winning online presence.</p>
-                    <p>I don't just build websites — I build tools that help your business grow.</p>
-                </div>
-                <div class="about-skills">
-                    <h3>Technical Skills</h3>
-                    <div class="skill-tags">
-                        <span>React</span>
-                        <span>Next.js</span>
-                        <span>TypeScript</span>
-                        <span>JavaScript</span>
-                        <span>HTML5</span>
-                        <span>CSS3</span>
-                        <span>Tailwind CSS</span>
-                        <span>Responsive Design</span>
-                        <span>Git</span>
-                        <span>SEO Basics</span>
-                    </div>
-                </div>
+      <div class="container">
+        <div class="about-content">
+          <div class="about-image">
+            <img
+              src="assets/mescott2.png"
+              alt="Scott Slagle, web developer based in Vacaville, CA"
+            />
+          </div>
+          <div class="about-text">
+            <h2>About Scott</h2>
+            <p>
+              I'm a frontend web developer based in Vacaville, CA, with a
+              background that bridges business operations and modern web
+              technology.
+            </p>
+            <p>
+              For 25 years, I managed B2B client accounts and built CRM
+              reporting systems at Jelly Belly Candy Company. I understand how
+              small businesses operate, what they need from technology, and how
+              to translate business goals into clean, effective websites.
+            </p>
+            <p>
+              After completing intensive training in React, Next.js, and modern
+              web development, I launched SS Web Design to help local
+              professionals and small businesses establish a credible,
+              client-winning online presence.
+            </p>
+            <p>
+              I don't just build websites — I build tools that help your
+              business grow.
+            </p>
+          </div>
+          <div class="about-skills">
+            <h3>Technical Skills</h3>
+            <div class="skill-tags">
+              <span>React</span>
+              <span>Next.js</span>
+              <span>TypeScript</span>
+              <span>JavaScript</span>
+              <span>HTML5</span>
+              <span>CSS3</span>
+              <span>Tailwind CSS</span>
+              <span>Responsive Design</span>
+              <span>Git</span>
+              <span>SEO Basics</span>
             </div>
+          </div>
         </div>
+      </div>
     </section>
 
     <!-- Testimonials -->
     <section class="testimonials">
-        <div class="container">
-            <h2>What Clients Say</h2>
-            <div class="testimonial-grid">
-                <div class="testimonial-card placeholder-card">
-                    <p>"Scott built exactly what we needed — a professional site that brings in new clients. The process was smooth and the result speaks for itself."</p>
-                    <div class="client-name">— Your Name Here</div>
-                    <div class="client-business">Your Business, Vacaville</div>
-                </div>
-                <div class="testimonial-card placeholder-card">
-                    <p>"Fast, responsive, and genuinely cares about helping small businesses succeed. Highly recommend."</p>
-                    <div class="client-name">— Your Name Here</div>
-                    <div class="client-business">Your Business, Fairfield</div>
-                </div>
-            </div>
+      <div class="container">
+        <h2>What Clients Say</h2>
+        <div class="testimonial-grid">
+          <div class="testimonial-card placeholder-card">
+            <p>
+              "Scott built exactly what we needed — a professional site that
+              brings in new clients. The process was smooth and the result
+              speaks for itself."
+            </p>
+            <div class="client-name">— Your Name Here</div>
+            <div class="client-business">Your Business, Vacaville</div>
+          </div>
+          <div class="testimonial-card placeholder-card">
+            <p>
+              "Fast, responsive, and genuinely cares about helping small
+              businesses succeed. Highly recommend."
+            </p>
+            <div class="client-name">— Your Name Here</div>
+            <div class="client-business">Your Business, Fairfield</div>
+          </div>
         </div>
+      </div>
     </section>
 
     <!-- Contact Section -->
     <section id="contact" class="contact">
-        <div class="container">
-            <h2>Get In Touch</h2>
-            <p class="contact-intro">Ready for a new website? Have questions? Let's talk.</p>
-            
-            <div class="contact-grid">
-                <div class="contact-info">
-                    <div class="info-item">
-                        <h4>Location</h4>
-                        <p>Vacaville, CA<br>Serving Solano County & Bay Area</p>
-                    </div>
-                    <div class="info-item">
-                        <h4>Free Website Audit</h4>
-                        <p>Not sure what you need? I'll review your current site (or your competitors') and send you a 3-point improvement plan — no obligation.</p>
-                    </div>
-                </div>
-                
-                <form class="contact-form" action="https://formspree.io/f/xeenpqbb" method="POST">
-                    <div class="form-group">
-                        <label for="name">Name</label>
-                        <input type="text" id="name" name="name" required aria-required="true">
-                    </div>
-                    <div class="form-group">
-                        <label for="email">Email</label>
-                        <input type="email" id="email" name="email" required aria-required="true">
-                    </div>
-                    <div class="form-group">
-                        <label for="business">Business Name</label>
-                        <input type="text" id="business" name="business">
-                    </div>
-                    <div class="form-group">
-                        <label for="service">Interested In</label>
-                        <select id="service" name="service" aria-describedby="service-help">
-                            <option value="">Select a service...</option>
-                            <option value="brochure">Brochure Site ($300)</option>
-                            <option value="business">Business Site ($1,200)</option>
-                            <option value="custom">Custom Site ($2,000+)</option>
-                            <option value="audit">Free Website Audit</option>
-                            <option value="other">Something Else</option>
-                        </select>
-                        <small id="service-help" class="form-help">Select the package that best fits your needs</small>
-                    </div>
-                    <div class="form-group">
-                        <label for="message">Tell me about your project</label>
-                        <textarea id="message" name="message" rows="4"></textarea>
-                    </div>
-                    <button type="submit" class="btn-primary">Send Message</button>
-                </form>
+      <div class="container">
+        <h2>Get In Touch</h2>
+        <p class="contact-intro">
+          Ready for a new website? Have questions? Let's talk.
+        </p>
+
+        <div class="contact-grid">
+          <div class="contact-info">
+            <div class="info-item">
+              <h4>Location</h4>
+              <p>Vacaville, CA<br />Serving Solano County & Bay Area</p>
             </div>
+            <div class="info-item">
+              <h4>Free Website Audit</h4>
+              <p>
+                Not sure what you need? I'll review your current site (or your
+                competitors') and send you a 3-point improvement plan — no
+                obligation.
+              </p>
+            </div>
+          </div>
+
+          <form
+            class="contact-form"
+            action="https://formspree.io/f/xeenpqbb"
+            method="POST"
+          >
+            <div class="form-group">
+              <label for="name">Name</label>
+              <input
+                type="text"
+                id="name"
+                name="name"
+                required
+                aria-required="true"
+              />
+            </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                required
+                aria-required="true"
+              />
+            </div>
+            <div class="form-group">
+              <label for="business">Business Name</label>
+              <input type="text" id="business" name="business" />
+            </div>
+            <div class="form-group">
+              <label for="service">Interested In</label>
+              <select
+                id="service"
+                name="service"
+                aria-describedby="service-help"
+              >
+                <option value="">Select a service...</option>
+                <option value="brochure">Brochure Site ($300)</option>
+                <option value="business">Business Site ($1,200)</option>
+                <option value="custom">Custom Site ($2,000+)</option>
+                <option value="audit">Free Website Audit</option>
+                <option value="other">Something Else</option>
+              </select>
+              <small id="service-help" class="form-help"
+                >Select the package that best fits your needs</small
+              >
+            </div>
+            <div class="form-group">
+              <label for="message">Tell me about your project</label>
+              <textarea id="message" name="message" rows="4"></textarea>
+            </div>
+            <button type="submit" class="btn-primary">Send Message</button>
+          </form>
         </div>
+      </div>
     </section>
 
     <!-- Footer -->
     <footer class="footer">
-        <div class="container">
-            <p>&copy; 2026 SS Web Design. Built with care in Vacaville, CA.</p>
-        </div>
+      <div class="container">
+        <p>&copy; 2026 SS Web Design. Built with care in Vacaville, CA.</p>
+      </div>
     </footer>
 
     <script src="script.js"></script>
-</body>
+  </body>
 </html>
