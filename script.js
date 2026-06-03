@@ -89,3 +89,61 @@ window.addEventListener('scroll', () => {
         }
     });
 });
+
+// Contact form AJAX submission
+const contactForm = document.getElementById('contact-form');
+const popupOverlay = document.getElementById('popup-overlay');
+const popupClose = document.getElementById('popup-close');
+
+if (contactForm) {
+    contactForm.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        
+        const formData = new FormData(contactForm);
+        const submitBtn = contactForm.querySelector('button[type="submit"]');
+        const originalText = submitBtn.textContent;
+        
+        submitBtn.textContent = 'Sending...';
+        submitBtn.disabled = true;
+        
+        try {
+            const response = await fetch('https://formspree.io/f/xeenpqbb', {
+                method: 'POST',
+                body: formData,
+                headers: {
+                    'Accept': 'application/json'
+                }
+            });
+            
+            if (response.ok) {
+                // Show popup
+                popupOverlay.style.display = 'flex';
+                
+                // Clear form
+                contactForm.reset();
+            } else {
+                alert('Oops! Something went wrong. Please try again.');
+            }
+        } catch (error) {
+            alert('Oops! Something went wrong. Please try again.');
+        } finally {
+            submitBtn.textContent = originalText;
+            submitBtn.disabled = false;
+        }
+    });
+}
+
+if (popupClose) {
+    popupClose.addEventListener('click', () => {
+        popupOverlay.style.display = 'none';
+    });
+}
+
+// Close popup when clicking outside
+if (popupOverlay) {
+    popupOverlay.addEventListener('click', (e) => {
+        if (e.target === popupOverlay) {
+            popupOverlay.style.display = 'none';
+        }
+    });
+}
