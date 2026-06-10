@@ -28,7 +28,7 @@ SS Web Design builds clean, fast, mobile-responsive websites for small businesse
 ## Projects Featured
 
 - [Nirvana Wellness Therapy](https://nirvana-wellness-therapy.vercel.app) — Brochure site for local therapist
-- [Law Office of Sample & Associates]([https://](https://law-office-sample.vercel.app/) - Business site for local law office
+- [Law Office of Sample & Associates](https://law-office-sample.vercel.app/) - Business site for local law office
 - [Fairfield Accounting Services](https://fairfield-accounting.vercel.app/) - Custom site for local accounting services business
 
 ## Contact
