@@ -337,18 +337,44 @@ body {
 
 .services-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
+   grid-template-columns: repeat(3, 1fr);
+    gap: 0;
     margin-bottom: 2rem;
+    align-items: stretch;
 }
 
 .service-card {
-    border: 2px solid var(--border);
-    border-radius: 12px;
-    padding: 2rem;
+    border: none;
+    border-radius: 0;
+    padding: 2rem 2.5rem;
     position: relative;
-    transition: box-shadow 0.2s, border-color 0.3s;
+    transition: box-shadow 0.2s;
     background: var(--bg-card);
+    display: flex;
+    flex-direction: column;
+}
+
+/* Vertical dividers between cards */
+.service-card:nth-child(1),
+.service-card:nth-child(2) {
+    border-right: none !important;
+}
+
+.service-card:nth-child(2)::before,
+.service-card:nth-child(3)::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 10%;
+    height: 80%;
+    width: 2px;
+    background: var(--primary);
+    z-index: 2;
+}
+
+.service-card .btn-outline,
+.service-card .btn-primary {
+    margin-top: auto;
 }
 
 .service-card:hover {
@@ -356,8 +382,7 @@ body {
 }
 
 .service-card.featured {
-    border-color: var(--accent);
-    transform: scale(1.02);
+    z-index: 1;
 }
 
 .badge {
@@ -820,6 +845,17 @@ body {
     
     .service-card.featured {
         transform: none;
+    }
+
+    /* Remove vertical dividers on mobile, add horizontal instead */
+    .service-card:nth-child(1),
+    .service-card:nth-child(2) {
+        border-right: none !important;
+        border-bottom: 2px solid var(--primary);
+    }
+
+    .service-card {
+        border-radius: 12px;
     }
     
     .theme-toggle {
