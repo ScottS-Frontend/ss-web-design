@@ -438,6 +438,76 @@ body {
     border: 1px solid var(--border);
 }
 
+.addons {
+    padding: 4rem 0;
+    background: var(--bg-secondary);
+}
+
+.addons h2 {
+    text-align: center;
+    font-size: 2.25rem;
+    margin-bottom: 0.5rem;
+    color: var(--text);
+}
+
+.addons-intro {
+    text-align: center;
+    color: var(--text-secondary);
+    margin-bottom: 3rem;
+    font-size: 1.05rem;
+}
+
+.addons-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+}
+
+.addon-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 1.5rem;
+    text-align: center;
+    transition: box-shadow 0.2s, transform 0.2s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.addon-card:hover {
+    box-shadow: 0 8px 20px var(--shadow);
+    transform: translateY(-3px);
+}
+
+.addon-card h3 {
+    font-size: 1.15rem;
+    margin-bottom: 0.5rem;
+    color: var(--text);
+}
+
+.addon-price {
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: var(--accent);
+    margin-bottom: 0.75rem;
+}
+
+.addon-card p {
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+    margin-bottom: 1.25rem;
+    line-height: 1.5;
+    flex-grow: 1;
+}
+
+.addon-card .btn-outline {
+    padding: 0.5rem 1.25rem;
+    font-size: 0.875rem;
+    margin-top: auto;
+}
+
+
 /* Portfolio */
 .portfolio {
     padding: 4rem 0;
@@ -861,5 +931,9 @@ body {
     .theme-toggle {
         padding: 0.4rem 0.75rem;
         font-size: 0.875rem;
+    }
+    
+    .addons-grid {
+        grid-template-columns: 1fr;
     }
 }
