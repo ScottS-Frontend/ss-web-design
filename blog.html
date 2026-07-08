@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog | SS Web Design</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar" aria-label="Main navigation">
+    <div class="container">
+      <a href="index.html" class="logo" aria-label="SS Web Design Home">
+        <img src="assets/sswebdesignlogotransparent.png" alt="SS Web Design Logo" class="logo-img logo-light">
+        <img src="assets/SSWebDesignLogo.png" alt="SS Web Design Logo" class="logo-img logo-dark">
+        <span class="logo-text">SS Web Design</span>
+      </a>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false" aria-controls="nav-links">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </button>
+      <ul class="nav-links" id="nav-links" role="menubar">
+        <li role="none"><a href="index.html" role="menuitem">Home</a></li>
+        <li role="none"><a href="faqs.html" role="menuitem">FAQ</a></li>
+        <li role="none"><a href="blog.html" role="menuitem">Blog</a></li>
+        <li role="none"><a href="index.html#contact" role="menuitem">Contact</a></li>
+        <li role="none"><button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode">🌙</button></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero" style="padding: 4rem 0;">
+    <div class="container">
+      <h1>SS Web Design Blog</h1>
+      <p class="hero-subtitle">Insights on web design, business growth, and why custom code wins.</p>
+    </div>
+  </section>
+
+  <!-- Blog Posts Grid -->
+  <section class="portfolio" style="padding: 4rem 0;">
+    <div class="container">
+      <div class="portfolio-grid">
+
+        <!-- Post 1 -->
+        <article class="portfolio-item" style="display: flex; flex-direction: column;">
+          <div style="background: var(--bg-secondary); padding: 1.5rem; border-bottom: 2px solid var(--primary);">
+            <span style="color: var(--text-secondary); font-size: 0.875rem; font-weight: 500;">July 8, 2026</span>
+            <h3 style="margin-top: 0.5rem; font-size: 1.25rem; color: var(--text);">Why Custom-Coded Websites Outperform Drag-and-Drop Builders</h3>
+          </div>
+          <div style="padding: 1.5rem; flex-grow: 1; display: flex; flex-direction: column;">
+            <p style="color: var(--text-secondary); line-height: 1.6; margin-bottom: 1.5rem; flex-grow: 1;">
+              What saves you money upfront costs you customers long-term. Learn why speed, SEO, and clean architecture matter more than a cheap template.
+            </p>
+            <a href="blog-post-1.html" class="btn-outline" style="align-self: flex-start;">Read More</a>
+          </div>
+        </article>
+
+        <!-- Post 2 -->
+        <article class="portfolio-item" style="display: flex; flex-direction: column;">
+          <div style="background: var(--bg-secondary); padding: 1.5rem; border-bottom: 2px solid var(--primary);">
+            <span style="color: var(--text-secondary); font-size: 0.875rem; font-weight: 500;">July 1, 2026</span>
+            <h3 style="margin-top: 0.5rem; font-size: 1.25rem; color: var(--text);">The Hidden Costs of "Free" Website Builders</h3>
+          </div>
+          <div style="padding: 1.5rem; flex-grow: 1; display: flex; flex-direction: column;">
+            <p style="color: var(--text-secondary); line-height: 1.6; margin-bottom: 1.5rem; flex-grow: 1;">
+              That "free" Wix plan? It could cost you $3,500 over five years — and you still won't own your site. Here's the real math.
+            </p>
+            <a href="blog-post-2.html" class="btn-outline" style="align-self: flex-start;">Read More</a>
+          </div>
+        </article>
+
+        <!-- Post 3 -->
+        <article class="portfolio-item" style="display: flex; flex-direction: column;">
+          <div style="background: var(--bg-secondary); padding: 1.5rem; border-bottom: 2px solid var(--primary);">
+            <span style="color: var(--text-secondary); font-size: 0.875rem; font-weight: 500;">June 24, 2026</span>
+            <h3 style="margin-top: 0.5rem; font-size: 1.25rem; color: var(--text);">Own Your Website: Don't Rent Your Online Presence</h3>
+          </div>
+          <div style="padding: 1.5rem; flex-grow: 1; display: flex; flex-direction: column;">
+            <p style="color: var(--text-secondary); line-height: 1.6; margin-bottom: 1.5rem; flex-grow: 1;">
+              Platform lock-in is real. When Wix changes the rules, you're stuck. Here's why owning your site means stability and control.
+            </p>
+            <a href="blog-post-3.html" class="btn-outline" style="align-self: flex-start;">Read More</a>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="contact" style="padding: 3rem 0;">
+    <div class="container" style="text-align: center;">
+      <div style="background: var(--bg-secondary); border: 1px solid var(--border); border-radius: 12px; padding: 2.5rem; max-width: 600px; margin: 0 auto;">
+        <h3 style="font-size: 1.5rem; font-weight: 700; color: var(--text); margin-bottom: 0.5rem;">Want a site that actually works for your business?</h3>
+        <p style="color: var(--text-secondary); margin-bottom: 1.5rem;">Let's talk about building something custom — no templates, no monthly fees, no compromises.</p>
+        <a href="index.html#contact" class="btn-primary">Get a Free Quote</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2026 SS Web Design. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+
+</body>
+</html>

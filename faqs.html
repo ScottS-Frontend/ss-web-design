@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FAQ | SS Web Design</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar" aria-label="Main navigation">
+    <div class="container">
+      <a href="index.html" class="logo" aria-label="SS Web Design Home">
+        <img src="assets/SSWebDesignLogoTransparent.png" alt="SS Web Design Logo" class="logo-img logo-light">
+        <img src="assets/SSWebDesignLogo.png" alt="SS Web Design Logo" class="logo-img logo-dark">
+        <span class="logo-text">SS Web Design</span>
+      </a>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false" aria-controls="nav-links">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </button>
+      <ul class="nav-links" id="nav-links" role="menubar">
+  <li role="none"><a href="index.html" role="menuitem">Home</a></li>
+  <li role="none"><a href="index.html#contact" role="menuitem">Contact</a></li>
+  <li role="none"><button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode">🌙</button></li>
+</ul>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero" style="padding: 4rem 0;">
+    <div class="container">
+      <h1>Frequently Asked Questions</h1>
+      <p class="hero-subtitle">Everything you need to know before we build your site.</p>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section class="services" style="padding: 2rem 0 4rem;">
+    <div class="container" style="max-width: 900px;">
+      <div class="faq-list" style="display: flex; flex-direction: column; gap: 1rem;">
+
+        <!-- Item 1 -->
+        <details class="faq-item" style="background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px; overflow: hidden; transition: box-shadow 0.3s;">
+          <summary style="display: flex; align-items: center; justify-content: space-between; cursor: pointer; padding: 1.25rem 1.5rem; font-size: 1.1rem; font-weight: 600; color: var(--text); list-style: none; user-select: none;">
+            <span>How do I get a domain name for my new website?</span>
+            <svg style="width: 20px; height: 20px; color: var(--text-secondary); flex-shrink: 0; transition: transform 0.3s;" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+          </summary>
+          <div style="padding: 0 1.5rem 1.5rem; color: var(--text-secondary); line-height: 1.7;">
+            <p>I recommend purchasing your domain through <a href="https://porkbun.com" target="_blank" rel="noopener noreferrer" style="color: var(--accent); font-weight: 600; text-decoration: none;">Porkbun</a> or <a href="https://namecheap.com" target="_blank" rel="noopener noreferrer" style="color: var(--accent); font-weight: 600; text-decoration: none;">Namecheap</a> — both are affordable, user-friendly, and give you full ownership.</p>
+            <p style="margin-top: 0.75rem;"><strong style="color: var(--text);">My recommendation:</strong> Buy it yourself so you retain complete ownership. You'll just need to point the domain's DNS records to the hosting server I provide during setup.</p>
+            <p style="margin-top: 0.75rem;"><strong style="color: var(--text);">Need help?</strong> I can walk you through the purchase step-by-step, or if you prefer, you can share your login credentials securely and I can handle it on your behalf.</p>
+          </div>
+        </details>
+
+        <!-- Item 2 -->
+        <details class="faq-item" style="background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px; overflow: hidden; transition: box-shadow 0.3s;">
+          <summary style="display: flex; align-items: center; justify-content: space-between; cursor: pointer; padding: 1.25rem 1.5rem; font-size: 1.1rem; font-weight: 600; color: var(--text); list-style: none; user-select: none;">
+            <span>How do I set up hosting for my website?</span>
+            <svg style="width: 20px; height: 20px; color: var(--text-secondary); flex-shrink: 0; transition: transform 0.3s;" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+          </summary>
+          <div style="padding: 0 1.5rem 1.5rem; color: var(--text-secondary); line-height: 1.7;">
+            <p>For most small business sites, I recommend <a href="https://vercel.com" target="_blank" rel="noopener noreferrer" style="color: var(--accent); font-weight: 600; text-decoration: none;">Vercel</a> (for static sites) or a managed provider like <a href="https://hostinger.com" target="_blank" rel="noopener noreferrer" style="color: var(--accent); font-weight: 600; text-decoration: none;">Hostinger</a> or <a href="https://siteground.com" target="_blank" rel="noopener noreferrer" style="color: var(--accent); font-weight: 600; text-decoration: none;">SiteGround</a> for traditional server environments.</p>
+            <p style="margin-top: 0.75rem;"><strong style="color: var(--text);">My process:</strong></p>
+            <ol style="margin: 0.5rem 0 0 1.25rem; padding-left: 1rem; color: var(--text-secondary);">
+              <li style="margin-bottom: 0.35rem;">I build and test your site on my staging environment</li>
+              <li style="margin-bottom: 0.35rem;">Once approved, I deploy it to your hosting account</li>
+              <li>I connect your domain and configure SSL (the HTTPS padlock)</li>
+            </ol>
+            <p style="margin-top: 0.75rem;"><strong style="color: var(--text);">You can either:</strong> set up the hosting account yourself and provide me access, or I can recommend the right plan and guide you through signup. I do not resell hosting — this keeps costs transparent and ensures you own your account outright.</p>
+          </div>
+        </details>
+
+        <!-- Item 3 -->
+        <details class="faq-item" style="background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px; overflow: hidden; transition: box-shadow 0.3s;">
+          <summary style="display: flex; align-items: center; justify-content: space-between; cursor: pointer; padding: 1.25rem 1.5rem; font-size: 1.1rem; font-weight: 600; color: var(--text); list-style: none; user-select: none;">
+            <span>What are your payment terms?</span>
+            <svg style="width: 20px; height: 20px; color: var(--text-secondary); flex-shrink: 0; transition: transform 0.3s;" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+          </summary>
+          <div style="padding: 0 1.5rem 1.5rem; color: var(--text-secondary); line-height: 1.7;">
+            <p><strong style="color: var(--text);">50% upfront, 50% upon completion.</strong></p>
+            <div style="margin-top: 1rem; overflow: hidden; border-radius: 8px; border: 1px solid var(--border);">
+              <table style="width: 100%; text-align: left; font-size: 0.95rem; border-collapse: collapse;">
+                <thead>
+                  <tr style="background: var(--bg-secondary);">
+                    <th style="padding: 0.75rem 1rem; color: var(--text); font-weight: 600; border-bottom: 1px solid var(--border);">Milestone</th>
+                    <th style="padding: 0.75rem 1rem; color: var(--text); font-weight: 600; border-bottom: 1px solid var(--border);">Payment</th>
+                    <th style="padding: 0.75rem 1rem; color: var(--text); font-weight: 600; border-bottom: 1px solid var(--border);">When</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr style="border-bottom: 1px solid var(--border);">
+                    <td style="padding: 0.75rem 1rem; color: var(--text-secondary);">Project kickoff</td>
+                    <td style="padding: 0.75rem 1rem; color: var(--text-secondary);">50% deposit</td>
+                    <td style="padding: 0.75rem 1rem; color: var(--text-secondary);">Before work begins</td>
+                  </tr>
+                  <tr>
+                    <td style="padding: 0.75rem 1rem; color: var(--text-secondary);">Site launch</td>
+                    <td style="padding: 0.75rem 1rem; color: var(--text-secondary);">50% final payment</td>
+                    <td style="padding: 0.75rem 1rem; color: var(--text-secondary);">Upon your approval</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <p style="margin-top: 1rem;"><strong style="color: var(--text);">Payment method:</strong> PayPal (invoiced to your email)</p>
+            <p style="margin-top: 0.5rem;"><strong style="color: var(--text);">What "completion" means:</strong> The site is live, all agreed-upon features are functional, and you've signed off on the final review. Minor tweaks (font changes, copy edits) within 30 days of launch are included at no extra charge.</p>
+          </div>
+        </details>
+
+        <!-- Item 4 -->
+        <details class="faq-item" style="background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px; overflow: hidden; transition: box-shadow 0.3s;">
+          <summary style="display: flex; align-items: center; justify-content: space-between; cursor: pointer; padding: 1.25rem 1.5rem; font-size: 1.1rem; font-weight: 600; color: var(--text); list-style: none; user-select: none;">
+            <span>How long will it take to build my website?</span>
+            <svg style="width: 20px; height: 20px; color: var(--text-secondary); flex-shrink: 0; transition: transform 0.3s;" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+          </summary>
+          <div style="padding: 0 1.5rem 1.5rem; color: var(--text-secondary); line-height: 1.7;">
+            <p><strong style="color: var(--text);">Typical timeline: 2–6 weeks</strong> depending on project scope.</p>
+            <ul style="margin: 0.75rem 0 0 1.25rem; padding-left: 1rem; color: var(--text-secondary);">
+              <li style="margin-bottom: 0.35rem;"><strong style="color: var(--text);">Simple brochure site</strong> (5 pages, no custom features): 2–3 weeks</li>
+              <li style="margin-bottom: 0.35rem;"><strong style="color: var(--text);">Small business site</strong> (blog, forms, galleries): 3–4 weeks</li>
+              <li><strong style="color: var(--text);">E-commerce or advanced features</strong> (payments, booking, portals): 4–6+ weeks</li>
+            </ul>
+            <p style="margin-top: 0.75rem;">The clock starts once I receive your deposit, content, and brand assets. Delays in providing feedback or content will extend the timeline.</p>
+          </div>
+        </details>
+
+        <!-- Item 5 -->
+        <details class="faq-item" style="background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px; overflow: hidden; transition: box-shadow 0.3s;">
+          <summary style="display: flex; align-items: center; justify-content: space-between; cursor: pointer; padding: 1.25rem 1.5rem; font-size: 1.1rem; font-weight: 600; color: var(--text); list-style: none; user-select: none;">
+            <span>What do I need to provide before we start?</span>
+            <svg style="width: 20px; height: 20px; color: var(--text-secondary); flex-shrink: 0; transition: transform 0.3s;" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+          </summary>
+          <div style="padding: 0 1.5rem 1.5rem; color: var(--text-secondary); line-height: 1.7;">
+            <p>To keep things moving smoothly, I'll need:</p>
+            <ul style="margin: 0.75rem 0 0 1.25rem; padding-left: 1rem; color: var(--text-secondary);">
+              <li style="margin-bottom: 0.35rem;"><strong style="color: var(--text);">Written content</strong> for each page (or a detailed outline)</li>
+              <li style="margin-bottom: 0.35rem;"><strong style="color: var(--text);">Logo and brand assets</strong> (or I can design a simple logo for an additional fee)</li>
+              <li style="margin-bottom: 0.35rem;"><strong style="color: var(--text);">High-quality photos</strong> (your own, stock photos I can source, or I can recommend a photographer)</li>
+              <li><strong style="color: var(--text);">Any specific examples</strong> of websites you like (and what you like about them)</li>
+            </ul>
+            <p style="margin-top: 0.75rem;"><strong style="color: var(--text);">Don't have everything ready?</strong> No problem — I can work with placeholder content and refine together, or I offer copywriting assistance as an add-on service.</p>
+          </div>
+        </details>
+
+        <!-- Item 6 -->
+        <details class="faq-item" style="background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px; overflow: hidden; transition: box-shadow 0.3s;">
+          <summary style="display: flex; align-items: center; justify-content: space-between; cursor: pointer; padding: 1.25rem 1.5rem; font-size: 1.1rem; font-weight: 600; color: var(--text); list-style: none; user-select: none;">
+            <span>Will my website work on mobile phones?</span>
+            <svg style="width: 20px; height: 20px; color: var(--text-secondary); flex-shrink: 0; transition: transform 0.3s;" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+          </summary>
+          <div style="padding: 0 1.5rem 1.5rem; color: var(--text-secondary); line-height: 1.7;">
+            <p><strong style="color: var(--text);">Absolutely.</strong> Every site I build is fully responsive, meaning it automatically adapts to look great on desktops, tablets, and smartphones.</p>
+            <p style="margin-top: 0.75rem;">I test across common screen sizes and browsers before launch. Mobile-first design is standard — not an upsell.</p>
+          </div>
+        </details>
+
+        <!-- Item 7 -->
+        <details class="faq-item" style="background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px; overflow: hidden; transition: box-shadow 0.3s;">
+          <summary style="display: flex; align-items: center; justify-content: space-between; cursor: pointer; padding: 1.25rem 1.5rem; font-size: 1.1rem; font-weight: 600; color: var(--text); list-style: none; user-select: none;">
+            <span>Can I update the website myself after it's built?</span>
+            <svg style="width: 20px; height: 20px; color: var(--text-secondary); flex-shrink: 0; transition: transform 0.3s;" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+          </summary>
+          <div style="padding: 0 1.5rem 1.5rem; color: var(--text-secondary); line-height: 1.7;">
+            <p><strong style="color: var(--text);">Yes.</strong> I build sites with user-friendly content management in mind.</p>
+            <p style="margin-top: 0.75rem;">For simple sites, I can integrate a lightweight CMS or set up easy-to-edit sections. For more complex needs, I can train you (or your team) on how to make basic updates — text changes, swapping images, adding blog posts.</p>
+            <p style="margin-top: 0.75rem;"><strong style="color: var(--text);">Rather not touch it?</strong> I offer affordable monthly maintenance packages for ongoing updates and security.</p>
+          </div>
+        </details>
+
+        <!-- Item 8 -->
+        <details class="faq-item" style="background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px; overflow: hidden; transition: box-shadow 0.3s;">
+          <summary style="display: flex; align-items: center; justify-content: space-between; cursor: pointer; padding: 1.25rem 1.5rem; font-size: 1.1rem; font-weight: 600; color: var(--text); list-style: none; user-select: none;">
+            <span>Do you offer ongoing support or maintenance after launch?</span>
+            <svg style="width: 20px; height: 20px; color: var(--text-secondary); flex-shrink: 0; transition: transform 0.3s;" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+          </summary>
+          <div style="padding: 0 1.5rem 1.5rem; color: var(--text-secondary); line-height: 1.7;">
+            <p><strong style="color: var(--text);">Yes.</strong> I offer flexible maintenance options:</p>
+            <div style="margin-top: 1rem; overflow: hidden; border-radius: 8px; border: 1px solid var(--border);">
+              <table style="width: 100%; text-align: left; font-size: 0.95rem; border-collapse: collapse;">
+                <thead>
+                  <tr style="background: var(--bg-secondary);">
+                    <th style="padding: 0.75rem 1rem; color: var(--text); font-weight: 600; border-bottom: 1px solid var(--border);">Plan</th>
+                    <th style="padding: 0.75rem 1rem; color: var(--text); font-weight: 600; border-bottom: 1px solid var(--border);">What's Included</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr style="border-bottom: 1px solid var(--border);">
+                    <td style="padding: 0.75rem 1rem; color: var(--text-secondary);">Pay-as-you-go</td>
+                    <td style="padding: 0.75rem 1rem; color: var(--text-secondary);">Hourly rate for updates as needed</td>
+                  </tr>
+                  <tr>
+                    <td style="padding: 0.75rem 1rem; color: var(--text-secondary);">Monthly retainer</td>
+                    <td style="padding: 0.75rem 1rem; color: var(--text-secondary);">Priority support, regular backups, security updates, minor content changes</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <p style="margin-top: 1rem;">I also provide a <strong style="color: var(--text);">30-day warranty</strong> after launch for any bugs or issues related to the original build.</p>
+          </div>
+        </details>
+
+        <!-- Item 9 -->
+        <details class="faq-item" style="background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px; overflow: hidden; transition: box-shadow 0.3s;">
+          <summary style="display: flex; align-items: center; justify-content: space-between; cursor: pointer; padding: 1.25rem 1.5rem; font-size: 1.1rem; font-weight: 600; color: var(--text); list-style: none; user-select: none;">
+            <span>What if I need changes after the site is live?</span>
+            <svg style="width: 20px; height: 20px; color: var(--text-secondary); flex-shrink: 0; transition: transform 0.3s;" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+          </summary>
+          <div style="padding: 0 1.5rem 1.5rem; color: var(--text-secondary); line-height: 1.7;">
+            <p><strong style="color: var(--text);">Minor tweaks are included.</strong> For the first 30 days after launch, small adjustments (text edits, image swaps, color tweaks) are covered at no charge.</p>
+            <p style="margin-top: 0.75rem;"><strong style="color: var(--text);">Larger changes or new features</strong> (adding pages, new functionality, redesigns) are quoted separately or billed at my hourly rate.</p>
+          </div>
+        </details>
+
+        <!-- Item 10 -->
+        <details class="faq-item" style="background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px; overflow: hidden; transition: box-shadow 0.3s;">
+          <summary style="display: flex; align-items: center; justify-content: space-between; cursor: pointer; padding: 1.25rem 1.5rem; font-size: 1.1rem; font-weight: 600; color: var(--text); list-style: none; user-select: none;">
+            <span>What platform or technologies do you use?</span>
+            <svg style="width: 20px; height: 20px; color: var(--text-secondary); flex-shrink: 0; transition: transform 0.3s;" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+          </summary>
+          <div style="padding: 0 1.5rem 1.5rem; color: var(--text-secondary); line-height: 1.7;">
+            <p>I specialize in <strong style="color: var(--text);">React, Next.js, TypeScript, and modern CSS</strong> — the same technologies used by companies like Netflix, Stripe, and Vercel.</p>
+            <p style="margin-top: 0.75rem;">This means your site will be:</p>
+            <ul style="margin: 0.5rem 0 0 1.25rem; padding-left: 1rem; color: var(--text-secondary);">
+              <li style="margin-bottom: 0.35rem;"><strong style="color: var(--text);">Fast</strong> — optimized performance</li>
+              <li style="margin-bottom: 0.35rem;"><strong style="color: var(--text);">Secure</strong> — modern security practices</li>
+              <li style="margin-bottom: 0.35rem;"><strong style="color: var(--text);">Scalable</strong> — easy to grow with your business</li>
+              <li><strong style="color: var(--text);">SEO-friendly</strong> — search engines can find you</li>
+            </ul>
+            <p style="margin-top: 0.75rem;">I don't use restrictive page-builder platforms that lock you into monthly subscriptions or limit customization.</p>
+          </div>
+        </details>
+
+        <!-- Item 11 -->
+        <details class="faq-item" style="background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px; overflow: hidden; transition: box-shadow 0.3s;">
+          <summary style="display: flex; align-items: center; justify-content: space-between; cursor: pointer; padding: 1.25rem 1.5rem; font-size: 1.1rem; font-weight: 600; color: var(--text); list-style: none; user-select: none;">
+            <span>What happens if I want to move my site to another developer later?</span>
+            <svg style="width: 20px; height: 20px; color: var(--text-secondary); flex-shrink: 0; transition: transform 0.3s;" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+          </summary>
+          <div style="padding: 0 1.5rem 1.5rem; color: var(--text-secondary); line-height: 1.7;">
+            <p><strong style="color: var(--text);">You own everything.</strong> Because you purchased your own domain and hosting, and I use standard, widely-supported technologies, any qualified developer can pick up where I left off.</p>
+            <p style="margin-top: 0.75rem;">I provide clean, well-documented code and can hand off all files, credentials, and documentation upon request.</p>
+          </div>
+        </details>
+
+        <!-- Item 12 -->
+        <details class="faq-item" style="background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px; overflow: hidden; transition: box-shadow 0.3s;">
+          <summary style="display: flex; align-items: center; justify-content: space-between; cursor: pointer; padding: 1.25rem 1.5rem; font-size: 1.1rem; font-weight: 600; color: var(--text); list-style: none; user-select: none;">
+            <span>Do you offer logo design or branding services?</span>
+            <svg style="width: 20px; height: 20px; color: var(--text-secondary); flex-shrink: 0; transition: transform 0.3s;" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+          </summary>
+          <div style="padding: 0 1.5rem 1.5rem; color: var(--text-secondary); line-height: 1.7;">
+            <p><strong style="color: var(--text);">Basic logo design is available as an add-on.</strong> If you need a full brand identity (logo, color palette, typography, brand guidelines), I can either handle simpler projects in-house or connect you with a trusted graphic designer partner.</p>
+          </div>
+        </details>
+
+        <!-- Item 13 -->
+        <details class="faq-item" style="background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px; overflow: hidden; transition: box-shadow 0.3s;">
+          <summary style="display: flex; align-items: center; justify-content: space-between; cursor: pointer; padding: 1.25rem 1.5rem; font-size: 1.1rem; font-weight: 600; color: var(--text); list-style: none; user-select: none;">
+            <span>What if I don't like the design?</span>
+            <svg style="width: 20px; height: 20px; color: var(--text-secondary); flex-shrink: 0; transition: transform 0.3s;" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+          </summary>
+          <div style="padding: 0 1.5rem 1.5rem; color: var(--text-secondary); line-height: 1.7;">
+            <p><strong style="color: var(--text);">We iterate together.</strong> Before I write any code, I create a design mockup for your review and approval. This is the time to share honest feedback — major changes are much easier (and cheaper) at the design stage than after development.</p>
+            <p style="margin-top: 0.75rem;">I include <strong style="color: var(--text);">2 rounds of revisions</strong> in my base pricing. Additional revision rounds are billed at my hourly rate.</p>
+          </div>
+        </details>
+
+        <!-- Item 14 -->
+        <details class="faq-item" style="background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px; overflow: hidden; transition: box-shadow 0.3s;">
+          <summary style="display: flex; align-items: center; justify-content: space-between; cursor: pointer; padding: 1.25rem 1.5rem; font-size: 1.1rem; font-weight: 600; color: var(--text); list-style: none; user-select: none;">
+            <span>Do you offer e-commerce or online store functionality?</span>
+            <svg style="width: 20px; height: 20px; color: var(--text-secondary); flex-shrink: 0; transition: transform 0.3s;" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+          </summary>
+          <div style="padding: 0 1.5rem 1.5rem; color: var(--text-secondary); line-height: 1.7;">
+            <p><strong style="color: var(--text);">Yes.</strong> I can integrate secure payment processing (Stripe, PayPal) for product sales, service bookings, donation collection, or membership subscriptions.</p>
+            <p style="margin-top: 0.75rem;">E-commerce projects require additional planning for product catalogs, inventory, shipping, and tax considerations — we'll discuss these during our initial consultation.</p>
+          </div>
+        </details>
+
+        <!-- Item 15 -->
+        <details class="faq-item" style="background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px; overflow: hidden; transition: box-shadow 0.3s;">
+          <summary style="display: flex; align-items: center; justify-content: space-between; cursor: pointer; padding: 1.25rem 1.5rem; font-size: 1.1rem; font-weight: 600; color: var(--text); list-style: none; user-select: none;">
+            <span>Can you help with SEO (getting found on Google)?</span>
+            <svg style="width: 20px; height: 20px; color: var(--text-secondary); flex-shrink: 0; transition: transform 0.3s;" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+          </summary>
+          <div style="padding: 0 1.5rem 1.5rem; color: var(--text-secondary); line-height: 1.7;">
+            <p><strong style="color: var(--text);">Yes.</strong> Every site I build includes technical SEO best practices:</p>
+            <ul style="margin: 0.75rem 0 0 1.25rem; padding-left: 1rem; color: var(--text-secondary);">
+              <li style="margin-bottom: 0.35rem;">Clean URL structures</li>
+              <li style="margin-bottom: 0.35rem;">Fast loading speeds</li>
+              <li style="margin-bottom: 0.35rem;">Mobile optimization</li>
+              <li style="margin-bottom: 0.35rem;">Proper meta tags and structured data</li>
+              <li>XML sitemaps submitted to search engines</li>
+            </ul>
+            <p style="margin-top: 0.75rem;"><strong style="color: var(--text);">For ongoing SEO strategy</strong> (keyword research, content optimization, link building), I can recommend trusted specialists or handle basic on-page SEO as an add-on.</p>
+          </div>
+        </details>
+
+      </div>
+    </div>
+  </section>
+
+ <!-- CTA -->
+  <section class="contact" style="padding: 3rem 0;">
+    <div class="container" style="text-align: center;">
+      <div style="background: var(--bg-secondary); border: 1px solid var(--border); border-radius: 12px; padding: 2.5rem; max-width: 600px; margin: 0 auto;">
+        <h3 style="font-size: 1.5rem; font-weight: 700; color: var(--text); margin-bottom: 0.5rem;">Still have questions?</h3>
+        <p style="color: var(--text-secondary); margin-bottom: 1.5rem;">I'm happy to chat — no pressure, no obligation.</p>
+        <a href="index.html#contact" class="btn-primary">Get in Touch</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2026 SS Web Design. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
