@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog | SS Web Design</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar" aria-label="Main navigation">
+    <div class="container">
+      <a href="index.html" class="logo" aria-label="SS Web Design Home">
+        <img src="assets/SSWebDesignLogoTransparent.png" alt="SS Web Design Logo" class="logo-img logo-light">
+        <img src="assets/SSWebDesignLogo.png" alt="SS Web Design Logo" class="logo-img logo-dark">
+        <span class="logo-text">SS Web Design</span>
+      </a>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false" aria-controls="nav-links">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </button>
+      <ul class="nav-links" id="nav-links" role="menubar">
+        <li role="none"><a href="index.html" role="menuitem">Home</a></li>
+        <li role="none"><a href="faqs.html" role="menuitem">FAQ</a></li>
+        <li role="none"><a href="blog.html" role="menuitem">Blog</a></li>
+        <li role="none"><a href="index.html#contact" role="menuitem">Contact</a></li>
+        <li role="none"><button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode">🌙</button></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Hero (filled in by script below) -->
+  <section class="hero" style="padding: 4rem 0;">
+    <div class="container"><br/><br/>
+      <h1 id="post-title"></h1>
+      <p class="hero-subtitle" id="post-date"></p>
+    </div>
+  </section>
+
+  <!-- Article Content (loaded from posts/<slug>.html) -->
+  <section class="about" style="padding: 3rem 0;">
+    <div class="container" style="max-width: 800px;">
+      <article id="post-content" style="background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px; padding: 2.5rem; line-height: 1.8; color: var(--text-secondary);">
+        <p>Loading…</p>
+      </article>
+    </div>
+  </section>
+
+  <!-- Related Posts (rendered automatically) -->
+  <section class="portfolio" style="padding: 3rem 0;">
+    <div class="container">
+      <h2 style="text-align: center; margin-bottom: 2rem;">More from the Blog</h2>
+      <div class="portfolio-grid" id="related-grid"></div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2026 SS Web Design. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="posts.js"></script>
+  <script>
+    const slug = new URLSearchParams(window.location.search).get("slug");
+    const post = BLOG_POSTS.find(p => p.slug === slug);
+
+    if (!post) {
+      // Unknown or missing slug — send them back to the blog index
+      window.location.replace("blog.html");
+    } else {
+      document.title = post.title + " | SS Web Design Blog";
+      document.getElementById("post-title").innerHTML = post.pageTitle || post.title;
+      document.getElementById("post-date").textContent = post.date + " | SS Web Design";
+
+      // Load the article fragment
+      fetch("posts/" + post.slug + ".html")
+        .then(res => {
+          if (!res.ok) throw new Error("Post not found");
+          return res.text();
+        })
+        .then(html => {
+          document.getElementById("post-content").innerHTML = html;
+        })
+        .catch(() => {
+          document.getElementById("post-content").innerHTML =
+            "<p>Sorry, this post couldn't be loaded. <a href='blog.html' style='color: var(--primary);'>Back to the blog</a>.</p>";
+        });
+
+      // "More from the Blog" — the 2 newest other posts
+      const related = BLOG_POSTS.filter(p => p.slug !== slug).slice(0, 2);
+      document.getElementById("related-grid").innerHTML = related.map(p => `
+        <div class="portfolio-item" style="padding: 1.5rem;">
+          <span style="color: var(--text-secondary); font-size: 0.875rem;">${p.date}</span>
+          <h3 style="margin-top: 0.5rem; font-size: 1.15rem; color: var(--text);">${p.title}</h3>
+          <p style="color: var(--text-secondary); margin: 1rem 0;">${p.excerpt}</p>
+          <a href="post.html?slug=${p.slug}" class="tag">Read More</a>
+        </div>
+      `).join("");
+    }
+  </script>
+  <script src="script.js"></script>
+
+</body>
+</html>

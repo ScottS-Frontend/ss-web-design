@@ -39,54 +39,10 @@
     </div>
   </section>
 
-  <!-- Blog Posts Grid -->
+  <!-- Blog Posts Grid (rendered automatically from posts.js) -->
   <section class="portfolio" style="padding: 4rem 0;">
     <div class="container">
-      <div class="portfolio-grid">
-
-        <!-- Post 1 -->
-        <article class="portfolio-item" style="display: flex; flex-direction: column;">
-          <div style="background: var(--bg-secondary); padding: 1.5rem; border-bottom: 2px solid var(--primary);">
-            <span style="color: var(--text-secondary); font-size: 0.875rem; font-weight: 500;">July 8, 2026</span>
-            <h3 style="margin-top: 0.5rem; font-size: 1.25rem; color: var(--text);">Why Custom-Coded Websites Outperform Drag-and-Drop Builders</h3>
-          </div>
-          <div style="padding: 1.5rem; flex-grow: 1; display: flex; flex-direction: column;">
-            <p style="color: var(--text-secondary); line-height: 1.6; margin-bottom: 1.5rem; flex-grow: 1;">
-              What saves you money upfront costs you customers long-term. Learn why speed, SEO, and clean architecture matter more than a cheap template.
-            </p>
-            <a href="blog-post-1.html" class="btn-outline" style="align-self: flex-start;">Read More</a>
-          </div>
-        </article>
-
-        <!-- Post 2 -->
-        <article class="portfolio-item" style="display: flex; flex-direction: column;">
-          <div style="background: var(--bg-secondary); padding: 1.5rem; border-bottom: 2px solid var(--primary);">
-            <span style="color: var(--text-secondary); font-size: 0.875rem; font-weight: 500;">July 1, 2026</span>
-            <h3 style="margin-top: 0.5rem; font-size: 1.25rem; color: var(--text);">The Hidden Costs of "Free" Website Builders</h3>
-          </div>
-          <div style="padding: 1.5rem; flex-grow: 1; display: flex; flex-direction: column;">
-            <p style="color: var(--text-secondary); line-height: 1.6; margin-bottom: 1.5rem; flex-grow: 1;">
-              That "free" Wix plan? It could cost you $3,500 over five years — and you still won't own your site. Here's the real math.
-            </p>
-            <a href="blog-post-2.html" class="btn-outline" style="align-self: flex-start;">Read More</a>
-          </div>
-        </article>
-
-        <!-- Post 3 -->
-        <article class="portfolio-item" style="display: flex; flex-direction: column;">
-          <div style="background: var(--bg-secondary); padding: 1.5rem; border-bottom: 2px solid var(--primary);">
-            <span style="color: var(--text-secondary); font-size: 0.875rem; font-weight: 500;">June 24, 2026</span>
-            <h3 style="margin-top: 0.5rem; font-size: 1.25rem; color: var(--text);">Own Your Website: Don't Rent Your Online Presence</h3>
-          </div>
-          <div style="padding: 1.5rem; flex-grow: 1; display: flex; flex-direction: column;">
-            <p style="color: var(--text-secondary); line-height: 1.6; margin-bottom: 1.5rem; flex-grow: 1;">
-              Platform lock-in is real. When Wix changes the rules, you're stuck. Here's why owning your site means stability and control.
-            </p>
-            <a href="blog-post-3.html" class="btn-outline" style="align-self: flex-start;">Read More</a>
-          </div>
-        </article>
-
-      </div>
+      <div class="portfolio-grid" id="blog-grid"></div>
     </div>
   </section>
 
@@ -108,6 +64,23 @@
     </div>
   </footer>
 
+  <script src="posts.js"></script>
+  <script>
+    document.getElementById("blog-grid").innerHTML = BLOG_POSTS.map(post => `
+      <article class="portfolio-item" style="display: flex; flex-direction: column;">
+        <div style="background: var(--bg-secondary); padding: 1.5rem; border-bottom: 2px solid var(--primary);">
+          <span style="color: var(--text-secondary); font-size: 0.875rem; font-weight: 500;">${post.date}</span>
+          <h3 style="margin-top: 0.5rem; font-size: 1.25rem; color: var(--text);">${post.title}</h3>
+        </div>
+        <div style="padding: 1.5rem; flex-grow: 1; display: flex; flex-direction: column;">
+          <p style="color: var(--text-secondary); line-height: 1.6; margin-bottom: 1.5rem; flex-grow: 1;">
+            ${post.excerpt}
+          </p>
+          <a href="post.html?slug=${post.slug}" class="btn-outline" style="align-self: flex-start;">Read More</a>
+        </div>
+      </article>
+    `).join("");
+  </script>
   <script src="script.js"></script>
 
 </body>
