@@ -66,21 +66,40 @@
 
   <script src="posts.js"></script>
   <script>
-    document.getElementById("blog-grid").innerHTML = BLOG_POSTS.map(post => `
-      <article class="portfolio-item" style="display: flex; flex-direction: column;">
-        <div style="background: var(--bg-secondary); padding: 1.5rem; border-bottom: 2px solid var(--primary);">
-          <span style="color: var(--text-secondary); font-size: 0.875rem; font-weight: 500;">${post.date}</span>
-          <h3 style="margin-top: 0.5rem; font-size: 1.25rem; color: var(--text);">${post.title}</h3>
-        </div>
-        <div style="padding: 1.5rem; flex-grow: 1; display: flex; flex-direction: column;">
-          <p style="color: var(--text-secondary); line-height: 1.6; margin-bottom: 1.5rem; flex-grow: 1;">
-            ${post.excerpt}
-          </p>
-          <a href="post.html?slug=${post.slug}" class="btn-outline" style="align-self: flex-start;">Read More</a>
-        </div>
-      </article>
-    `).join("");
-  </script>
+  document.getElementById("blog-grid").innerHTML = BLOG_POSTS.map(post => `
+    <article class="portfolio-item" style="display: flex; flex-direction: column;">
+      <div class="card-header" style="background: var(--bg-secondary); padding: 1.5rem; border-bottom: 2px solid var(--primary);">
+        <span style="color: var(--text-secondary); font-size: 0.875rem; font-weight: 500;">${post.date}</span>
+        <h3 style="margin-top: 0.5rem; font-size: 1.25rem; color: var(--text);">${post.title}</h3>
+      </div>
+      <div style="padding: 1.5rem; flex-grow: 1; display: flex; flex-direction: column;">
+        <p style="color: var(--text-secondary); line-height: 1.6; margin-bottom: 1.5rem; flex-grow: 1;">
+          ${post.excerpt}
+        </p>
+        <a href="post.html?slug=${post.slug}" class="btn-outline" style="align-self: flex-start;">Read More</a>
+      </div>
+    </article>
+  `).join("");
+
+  // Keep the blue divider lines level across each row
+  function alignCardHeaders() {
+    const headers = document.querySelectorAll("#blog-grid .card-header");
+    headers.forEach(h => (h.style.minHeight = "")); // reset before re-measuring
+    const rows = {};
+    headers.forEach(h => {
+      const top = h.offsetTop;
+      (rows[top] = rows[top] || []).push(h);
+    });
+    Object.values(rows).forEach(row => {
+      const max = Math.max(...row.map(h => h.offsetHeight));
+      row.forEach(h => (h.style.minHeight = max + "px"));
+    });
+  }
+
+  alignCardHeaders();
+  window.addEventListener("load", alignCardHeaders);
+  window.addEventListener("resize", alignCardHeaders);
+</script>
   <script src="script.js"></script>
 
 </body>
