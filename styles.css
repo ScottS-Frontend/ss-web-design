@@ -937,3 +937,74 @@ body {
         grid-template-columns: 1fr;
     }
 }
+
+/* ==========================================================
+   Additions for actors.html — appended, nothing above changed
+   ========================================================== */
+
+/* Link inside the About Scott "also a working actor" line */
+.about-note a {
+    color: var(--accent);
+    font-weight: 600;
+    text-decoration: underline;
+}
+
+.about-note a:hover {
+    color: var(--accent-hover);
+}
+
+/* Single centered card for the one-package actors.html services grid */
+.actor-package-grid {
+    grid-template-columns: 1fr;
+    max-width: 480px;
+    margin: 0 auto;
+}
+
+/* Reset the 3-card divider rules so they don't apply to the single card */
+.actor-package-grid .service-card:nth-child(1),
+.actor-package-grid .service-card:nth-child(2) {
+    border-bottom: none !important;
+}
+
+.actor-package-grid .service-card::before {
+    content: none;
+}
+
+/* FAQ accordion (native <details>/<summary>, styled to match the site) */
+.faq-item {
+    border-bottom: 1px solid var(--border);
+    padding: 1.25rem 0;
+}
+
+.faq-item summary {
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 1.05rem;
+    color: var(--text);
+    list-style: none;
+}
+
+.faq-item summary::-webkit-details-marker {
+    display: none;
+}
+
+.faq-item summary::before {
+    content: "+ ";
+    color: var(--accent);
+    font-weight: 700;
+}
+
+.faq-item[open] summary::before {
+    content: "– ";
+}
+
+.faq-item p {
+    margin-top: 0.75rem;
+    color: var(--text-secondary);
+    padding-left: 1.25rem;
+}
+
+.faq-item p a {
+    color: var(--accent);
+    font-weight: 500;
+}
