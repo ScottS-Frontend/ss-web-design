@@ -281,6 +281,7 @@ body {
     margin-right: 1rem;
     border: 2px solid var(--primary);
     transition: all 0.2s;
+    text-align: center;
 }
 
 .btn-primary:hover {
@@ -645,10 +646,16 @@ body {
     box-shadow: 0 4px 15px var(--shadow);
 }
 
+.about-text {
+    max-width: 700px;
+    margin: 0 auto;      /* centers the block on the page */
+    text-align: center;  /* centers the text inside */
+}
+
 .about-text p {
-    margin-bottom: 1rem;
     color: var(--text-secondary);
     font-size: 1.05rem;
+    margin-bottom: 1rem;
 }
 
 .about-skills h3 {
